@@ -1,0 +1,74 @@
+.header {
+
+  top: 0;
+  left: 0;
+	position: fixed;
+  width: 100%;
+  background: #607d8b;
+  color: white;
+  text-align: center;
+  height: 120px;
+	  
+}
+
+
+
+
+.footer {
+   position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #607d8b;
+  color: white;
+  text-align: center;
+}
+
+.main{
+	margin-top: 300px;
+	text-align: center;
+
+}
+
+.main_logo {
+	width: 300px;
+  display: inline-flex;
+  margin-top: 20px;
+
+}
+
+.username {
+	text-align: right;
+}
+a.button {
+	
+	position:relative;
+	padding: 10px 24px;
+	border-radius: 8px;
+	font-size: 12px;
+	text-align: center;
+ 	text-decoration: none;
+ 	color: white;
+	background-color: #555555;
+	display: flex;
+  justify-content: center;
+    top:50%; 
+    left:50%;
+    height:20px; 
+    width:100px; 
+    margin: -20px -50px; 
+}
+
+
+body {
+	background: #ffffcc;
+	/*background: #e6f2ff;*/
+  
+}
+.container{
+
+}
+
+
+
+

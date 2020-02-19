@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+​
+{% block content %}
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #DAA520;
+  color: white;
+}
+</style>
+​
+	
+​
+	
+	<div class="table">
+		
+		
+	{% if data %}
+	<h1>This are the students that applied for position {{ PosId }}</h1>
+		
+    <table >
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Surname</th>
+					<th>Department</th>
+					<th>Year</th>
+					<th>Num Lessons</th>
+					<th>Average</th>
+				</tr>
+​
+					
+			</thead>
+				
+			
+				{% for item in data %}
+	<tbody>   
+   <tr>
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.surname}}</td>
+        <td>{{item.department}}</td>
+        <td>{{item.year}}</td>
+        <td>{{item.lessons}}</td>
+        <td>{{item.average}}</td>
+    </tr>
+   
+    
+    
+    {% endfor %}
+</tbody>
+</table>
+    </div>
+   
+<div>
+	<h1>Show applied students for a possition</h1>
+​
+		<form  class = "form" method="post" action="choose_student">
+			<label for="PosId">Position:</label>
+			<input type="text" name="PosId" id="PosId" value="{{ PosId }}">
+			<br>
+			<label for="StudentId">Student ID:</label>
+			<input type="text" name="StudentId" id="StudentId" placeholder="e.g 21412">
+			<br>
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+	{% else %}
+	 <h1>Sorry no students applied.</h1>
+	{% endif %}	
+   
+​
+{% endblock %}

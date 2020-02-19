@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+	<style>
+		.mySlides {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  }
+	</style>
+	
+<section> 
+  <img class="mySlides" src="{% static 'images/2.png'%}"  style="width: 40%">
+  <img class="mySlides" src="{% static 'images/4.png'%}"  style="width: 50%">
+  <img class="mySlides" src="{% static 'images/internship.jpeg'%}"  style="width: 40%">
+</section>
+<script type="text/javascript">
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 1500);
+}
+</script>
+
+{% endblock %}
